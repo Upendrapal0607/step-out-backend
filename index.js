@@ -30,6 +30,9 @@ app.use(
 app.use(express.json());
 // app.use(express.static(path.join(__dirname, "public")));
 // cron_function()
+app.get('/', async ()=>{  
+  res.send('Hello from server')
+})
 
 app.use("/adminusers", adminusersRouter);
 app.use("/admin", TrainRoute);
