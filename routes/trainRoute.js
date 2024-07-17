@@ -4,7 +4,6 @@ const TrainModel = require("../model/TrainModel");
 
 const TrainRoute = express.Router();
 TrainRoute.post("/train", auth, async (req, res) => {
-  console.log(req.body);
   try {
     const trainData = new TrainModel(req.body);
     await trainData.save();
